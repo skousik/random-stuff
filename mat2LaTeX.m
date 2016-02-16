@@ -10,9 +10,9 @@ function str = mat2LaTeX(x, varargin)
 %   header    -- (double/logical) if True or 1 then include the LaTeX
 %                array header, footer, and parentheses; default is True
 %   arrForm   -- (string) 'r' or 'c', which tells LaTeX what kind of array
-%                alignment to use
+%                alignment to use (default is 'r')
 %   cleanMult -- (logical) if True then remove all '*' characters from
-%                output string
+%                output string (default is True)
 % Outputs:
 %   str      -- a string that can be pasted into LaTeX
 
