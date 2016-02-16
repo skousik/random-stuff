@@ -43,7 +43,12 @@ function str = mat2LaTeX(x, varargin)
     
 % Set up header (or lack thereof)
     if header
-        str = ['\left[\begin{array}{', repmat(arrForm,1,r), '} '] ;
+        switch arrForm
+            case 'r'
+                str = ['\left[\begin{array}{', repmat('r',1,r), '} '] ;
+            case 'c'
+                str = ['\left[\begin{array}{', repmat('c',1,c), '} '] ;
+        end
     else
         str = [] ;
     end
