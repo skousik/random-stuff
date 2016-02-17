@@ -1,6 +1,6 @@
 function str = mat2LaTeX(x, varargin)
 % Written by Shreyas Kousik (skousik@umich.edu)
-% Updated: 16 Feb 2016
+% Updated: 17 Feb 2016
 
 % Returns a numerical matrix or vector as a string formatted for LaTeX
 % Inputs:
@@ -10,7 +10,7 @@ function str = mat2LaTeX(x, varargin)
 %   header    -- (double/logical) if True or 1 then include the LaTeX
 %                array header, footer, and parentheses; default is True
 %   arrForm   -- (string) 'r' or 'c', which tells LaTeX what kind of array
-%                alignment to use (default is 'r')
+%                alignment to use (default is 'c')
 %   cleanMult -- (logical) if True then remove all '*' characters from
 %                output string (default is True)
 % Outputs:
@@ -19,7 +19,7 @@ function str = mat2LaTeX(x, varargin)
 
 % Set default values of optional inputs
     numForm = 3 ;
-    arrForm = 'r' ;
+    arrForm = 'c' ;
     header = 1 ;
     cleanMult = 1 ;
 
