@@ -20,8 +20,8 @@ function str = mat2LaTeX(x, varargin)
 % Set default values of optional inputs
     numForm = 3 ;
     arrForm = 'r' ;
-    header = True ;
-    cleanMult = True ;
+    header = 1 ;
+    cleanMult = 1 ;
 
     if nargin > 1
         for i = 1:2:length(varargin)
