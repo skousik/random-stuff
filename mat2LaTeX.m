@@ -9,8 +9,8 @@ function str = mat2LaTeX(x, varargin)
 %                significant figures
 %   header    -- (double/logical) if True or 1 then include the LaTeX
 %                array header, footer, and parentheses; default is True
-%   arrForm   -- (string) 'r' or 'c', which tells LaTeX what kind of array
-%                alignment to use (default is 'c')
+%   arrForm   -- (string) 'r', 'l' or 'c', for right/left/center, to tell
+%                LaTeX what kind of column alignment to use (default is 'c')
 %   cleanMult -- (logical) if True then remove all '*' characters from
 %                output string (default is True)
 % Outputs:
@@ -43,12 +43,7 @@ function str = mat2LaTeX(x, varargin)
     
 % Set up header (or lack thereof)
     if header
-        switch arrForm
-            case 'r'
-                str = ['\left[\begin{array}{', repmat('r',1,r), '} '] ;
-            case 'c'
-                str = ['\left[\begin{array}{', repmat('c',1,c), '} '] ;
-        end
+        str = ['\left[\begin{array}{', repmat(arrForm,1,c), '} '] ;
     else
         str = [] ;
     end
